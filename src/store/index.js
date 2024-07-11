@@ -43,10 +43,10 @@ export default createStore({
          
           const user = state.users.find(user => user.name === authorName);
           if (!user) {
-            throw new Error(User with name ${authorName} not found.);
+            throw new Error(`User with name ${authorName} not found.`);
           }
           // Fetch user posts
-          const response = await axios.get(https://jsonplaceholder.typicode.com/posts?userId=${user.id});
+          const response = await axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${user.id}`);
           const userPosts = response.data;
           commit('SET_POSTS', userPosts);
           return { userDetails: user, userPosts };
@@ -61,6 +61,6 @@ export default createStore({
     getAuthorName: (state) => (userId) => {
       const user = state.users.find(user => user.id === userId)
       return user ? user.name : 'Unknown'
-    }
-  }
+    }
+  }
 })

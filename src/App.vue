@@ -2,7 +2,7 @@
   <div id="app">
      <NavigationBar/>
      <router-view></router-view>
-     <Fooder/>
+     <Footer/>
    </div>
    
  </template>

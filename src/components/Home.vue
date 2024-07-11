@@ -3,7 +3,7 @@
       <h1>Posts</h1>
       <ul>
         <li v-for="post in posts" :key="post.id">
-          <router-link :to="/post/${post.id}">{{ post.title }}</router-link>
+          <router-link :to="`/post/${post.id}`">{{ post.title }}</router-link>
           <p>{{ post.body }}</p>
           <small>Author: {{ getAuthorName(post.userId) }}</small>
         </li>
@@ -28,7 +28,8 @@
     created() {
       this.$store.dispatch('fetchPosts')
       this.$store.dispatch('fetchUsers')
-    }
+    }
   }
   </script>
+  
   

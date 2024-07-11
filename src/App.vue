@@ -9,13 +9,13 @@
  
  <script>
  import NavigationBar from './components/NavigationBar.vue';
- import Fooder from './components/Fooder.vue';
+ import Footer from './components/Footer.vue';
  
  export default {
    name: 'App',
    components: {
      NavigationBar,
-     Fooder
+     Footer
    }
  }
  </script>

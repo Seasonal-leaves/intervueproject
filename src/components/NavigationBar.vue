@@ -40,7 +40,7 @@
         const authorName = this.searchQuery.trim();
         if (authorName) {
           // Assuming you have a route named '/author/:authorName' to display author profile
-          this.$router.push(/author/${encodeURIComponent(authorName)});
+          this.$router.push(`/author/${encodeURIComponent(authorName)}`);
           // Clear search input after navigation
           this.searchQuery = '';
         }
@@ -50,6 +50,5 @@
   </script>
   
   <style scoped>
-  /* Add your custom styles here */
+  /* Add your custom styles here */
   </style>
-  
